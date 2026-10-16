@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport">
+  <meta name="theme-color" content="#141414">
+  <meta name="robots" content="index, follow">
+  <title>NEO GAME CAFE &amp; LOUNGE // BEYLİKDÜZÜ — PlayStation, Bilardo, Kutu Oyunları &amp; Kafe</title>
+  <meta name="description" content="Beylikdüzü'nde PlayStation oyun locaları, alt kat turnuva bilardo salonu, masaüstü strateji oyunları ve kafe. Makyol Starbucks karşısı, Mikel Cafe yanı.">
+
+  <!-- Open Graph & Social Sharing -->
+  <meta property="og:site_name" content="NEO GAME CAFE &amp; LOUNGE">
+  <meta property="og:title" content="NEO GAME CAFE &amp; LOUNGE // BEYLİKDÜZÜ">
+  <meta property="og:description" content="Beylikdüzü'nde PlayStation VIP odaları, alt kat turnuva bilardo salonu, masa oyunları ve kafe. 2 saat oyun oynayana mısır ve kola ücretsiz!">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/venue/venue-1.jpg">
+  <meta property="og:locale" content="tr_TR">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NEO GAME CAFE &amp; LOUNGE // BEYLİKDÜZÜ">
+  <meta name="twitter:description" content="PlayStation, Bilardo, Kutu Oyunları &amp; Kafe. 2 saat oyun oynayana patlamış mısır ve kola ikram!">
+  <meta name="twitter:image" content="assets/images/venue/venue-1.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23141414'/%3E%3Ccircle cx='50' cy='50' r='36' fill='%23AA0001'/%3E%3Ctext x='50' y='64' font-family='sans-serif' font-weight='bold' font-size='42' fill='%23F6F6F6' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts & Material Symbols (Latin-Ext enabled for Turkish) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Work+Sans:wght@400;500;600;700&display=swap&subset=latin,latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#131313",
+            "surface-dim": "#131313",
+            "surface-bright": "#393939",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-container-low": "#1c1b1b",
+            "surface-container": "#201f1f",
+            "surface-container-high": "#2a2a2a",
+            "surface-container-highest": "#353534",
+            "charcoal-black": "#141414",
+            "carbon-surface": "#262626",
+            "blood-red": "#AA0001",
+            "primary-container": "#aa0001",
+            "soft-grey": "#C3C3C3",
+            "silver-light": "#E5E5E5",
+            "pure-white": "#F6F6F6",
+            "on-surface": "#e5e2e1",
+            "on-surface-variant": "#e5bdb7"
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.75rem",
+            "space-xl": "3rem",
+            "space-2xl": "5rem",
+            "margin-mobile": "1.25rem",
+            "margin": "3rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "0.75rem"
+          },
+          fontFamily: {
+            "display-hero": ["Space Grotesk", "sans-serif"],
+            "headline-xl": ["Space Grotesk", "sans-serif"],
+            "headline-lg": ["Space Grotesk", "sans-serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "title-editorial": ["Space Grotesk", "sans-serif"],
+            "body-lg": ["Work Sans", "sans-serif"],
+            "body-md": ["Work Sans", "sans-serif"],
+            "body-sm": ["Work Sans", "sans-serif"],
+            "label-code": ["JetBrains Mono", "monospace"],
+            "label-index": ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- MapLibre GL CSS (for Carto Dark Matter Map) -->
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+
+  <!-- Custom Design Tokens & React Bits Motion Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-surface text-on-surface antialiased selection:bg-blood-red selection:text-pure-white overflow-x-hidden w-full max-w-full">
+
+  <!-- ========================================================================= -->
+  <!-- HEADER & NAVIGATION                                                       -->
+  <!-- ========================================================================= -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-charcoal-black/95 backdrop-blur-md border-b border-white/10">
+    <div class="h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between">
+      
+      <!-- Brand Anchor -->
+      <div class="flex items-center gap-space-sm">
+        <a class="flex items-baseline gap-space-xs group" href="#">
+          <span class="font-title-editorial text-title-editorial text-pure-white uppercase tracking-wider group-hover:text-blood-red transition-colors text-lg md:text-xl font-bold">
+            NEO GAME CAFE &amp; LOUNGE
+          </span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-space-xs" aria-label="Ana Menü">
+        <a class="px-space-sm py-space-xs font-label-code text-label-code uppercase tracking-wider text-on-surface-variant hover:text-pure-white hover:bg-carbon-surface transition-colors" href="#game-selector">
+          OYUNLAR
+        </a>
+        <a class="px-space-sm py-space-xs font-label-code text-label-code uppercase tracking-wider text-on-surface-variant hover:text-pure-white hover:bg-carbon-surface transition-colors" href="#deneyimler">
+          DENEYİMLER
+        </a>
+        <a class="px-space-sm py-space-xs font-label-code text-label-code uppercase tracking-wider text-on-surface-variant hover:text-pure-white hover:bg-carbon-surface transition-colors" href="#menu">
+          MENÜ &amp; CAFE
+        </a>
+        <a class="px-2.5 py-1 font-label-code text-label-code uppercase tracking-wider text-pure-white bg-blood-red/20 hover:bg-blood-red border border-blood-red/50 hover:border-blood-red transition-all flex items-center gap-1.5 shadow-sm" href="#kampanya">
+          <span class="w-1.5 h-1.5 rounded-full bg-blood-red animate-pulse"></span>
+          <span>KAMPANYA 🔥</span>
+        </a>
+        <a class="px-space-sm py-space-xs font-label-code text-label-code uppercase tracking-wider text-on-surface-variant hover:text-pure-white hover:bg-carbon-surface transition-colors" href="#mekan-galeri">
+          MEKAN &amp; GALERİ
+        </a>
+        <a class="px-space-sm py-space-xs font-label-code text-label-code uppercase tracking-wider text-on-surface-variant hover:text-pure-white hover:bg-carbon-surface transition-colors" href="#visit-venue">
+          KONUM &amp; İLETİŞİM
+        </a>
+      </nav>
+
+      <!-- Desktop Contact & Primary CTA -->
+      <div class="hidden md:flex items-center gap-space-md">
+        <a class="flex flex-col text-right group" href="tel:+905315869966" aria-label="Doğrudan İletişim Hattı">
+          <span class="font-label-index text-label-index text-soft-grey uppercase tracking-widest">DOĞRUDAN İLETİŞİM</span>
+          <span class="font-label-code text-label-code text-pure-white group-hover:text-blood-red font-bold transition-colors">
+            +90 531 586 99 66
+          </span>
+        </a>
+        <a class="px-space-md py-space-xs bg-blood-red hover:bg-pure-white hover:text-blood-red text-pure-white font-label-code text-label-code uppercase tracking-wider font-bold transition-all" href="#visit-venue">
+          YOL TARİFİ AL
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="lg:hidden flex items-center justify-center w-10 h-10 text-pure-white bg-carbon-surface hover:bg-surface-bright focus:outline-none" id="mobile-menu-btn" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
+        <span class="material-symbols-outlined text-[24px]" id="menu-icon">menu</span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Panel -->
+  <div class="fixed inset-0 bg-black/80 z-40 hidden transition-opacity duration-300" id="mobile-drawer-backdrop"></div>
+  <aside class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-charcoal-black z-50 transform translate-x-full border-l border-white/10 flex flex-col justify-between p-space-lg select-none" id="mobile-drawer" aria-label="Mobil Menü">
+    <div class="space-y-space-lg">
+      <div class="flex items-center justify-between pb-space-sm border-b border-white/10">
+        <div>
+          <div class="font-title-editorial text-pure-white font-bold tracking-tight text-xl">NEO GAME CAFE &amp; LOUNGE</div>
+        </div>
+        <button type="button" id="mobile-drawer-close" class="w-9 h-9 flex items-center justify-center bg-carbon-surface hover:bg-blood-red text-pure-white transition-colors" aria-label="Menüyü Kapat">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-space-xs">
+        <a class="mobile-nav-link py-space-sm font-headline-md text-headline-md text-pure-white hover:text-blood-red uppercase tracking-tight transition-colors border-b border-white/5" href="#game-selector">
+          OYUNLAR
+        </a>
+        <a class="mobile-nav-link py-space-sm font-headline-md text-headline-md text-pure-white hover:text-blood-red uppercase tracking-tight transition-colors border-b border-white/5" href="#deneyimler">
+          DENEYİMLER
+        </a>
+        <a class="mobile-nav-link py-space-sm font-headline-md text-headline-md text-pure-white hover:text-blood-red uppercase tracking-tight transition-colors border-b border-white/5" href="#menu">
+          MENÜ &amp; CAFE
+        </a>
+        <a class="mobile-nav-link py-space-sm font-headline-md text-headline-md text-blood-red hover:text-pure-white uppercase tracking-tight transition-colors border-b border-white/5 flex items-center justify-between" href="#kampanya">
+          <span class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-blood-red">local_fire_department</span>
+            <span>ÖZEL KAMPANYA</span>
+          </span>
+          <span class="text-[11px] px-2 py-0.5 bg-blood-red text-pure-white font-bold tracking-widest font-label-code">0 ₺ İKRAM</span>
+        </a>
+        <a class="mobile-nav-link py-space-sm font-headline-md text-headline-md text-pure-white hover:text-blood-red uppercase tracking-tight transition-colors border-b border-white/5" href="#mekan-galeri">
+          MEKAN &amp; GALERİ
+        </a>
+        <a class="mobile-nav-link py-space-sm font-headline-md text-headline-md text-pure-white hover:text-blood-red uppercase tracking-tight transition-colors border-b border-white/5" href="#visit-venue">
+          KONUM &amp; İLETİŞİM
+        </a>
+      </nav>
+    </div>
+
+    <div class="space-y-space-sm pt-space-md border-t border-white/10">
+      <div class="font-label-index text-soft-grey uppercase tracking-widest">[ÇALIŞMA SAATLERİ]</div>
+      <div class="font-body-sm text-pure-white/90">
+        Pzt–Per: 10:00–02:00<br>
+        Cum–Paz: 10:00–03:00
+      </div>
+      <a class="block w-full text-center py-space-sm bg-blood-red text-pure-white font-label-code text-label-code uppercase tracking-wider font-bold" href="tel:+905315869966">
+        ARA: +90 531 586 99 66
+      </a>
+      <a class="mobile-nav-link block w-full text-center py-space-sm bg-carbon-surface hover:bg-pure-white hover:text-charcoal-black text-pure-white font-label-code text-label-code uppercase tracking-wider font-bold transition-colors" href="#visit-venue">
+        YOL TARİFİ AL
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN CONTENT CONTAINER                                                    -->
+  <!-- ========================================================================= -->
+  <main class="w-full pt-20 bg-surface">
+
+    <!-- ========================================================================= -->
+    <!-- 1. ALAN: HERO SECTION (RECOMPOSED & BALANCED)                             -->
+    <!-- ========================================================================= -->
+    <section class="relative w-full bg-charcoal-black text-pure-white overflow-hidden pt-12 pb-space-xl px-margin-mobile lg:px-margin select-none border-b border-white/10">
+      
+      <!-- Top Metadata Bar -->
+      <div class="w-full flex flex-wrap items-center justify-between gap-2 pb-space-md text-pure-white/80 border-b border-white/10">
+        <div class="flex items-center gap-space-xs font-label-index text-label-index uppercase tracking-widest text-pure-white font-bold">
+          <span class="w-2 h-2 rounded-full bg-blood-red animate-pulse"></span>
+          <span>BEYLİKDÜZÜ // İSTANBUL</span>
+        </div>
+        <a href="#kampanya" class="group flex items-center gap-2 font-label-code text-xs uppercase tracking-wider text-pure-white hover:text-blood-red transition-colors bg-blood-red/10 border border-blood-red/30 px-3 py-1">
+          <span class="w-2 h-2 rounded-full bg-blood-red animate-ping"></span>
+          <span class="font-bold text-blood-red">[FIRSAT]</span>
+          <span class="text-pure-white group-hover:text-blood-red transition-colors">2 Saat Oyun Oynayana Mısır &amp; Kola Ücretsiz!</span>
+          <span class="material-symbols-outlined text-[14px] text-blood-red group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Main Hero Grid: Balanced Narrative & Visual Stage -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center pt-space-lg">
+        
+        <!-- Left Column: Primary Typography & Focused CTAs -->
+        <div class="lg:col-span-6 flex flex-col justify-center z-10 space-y-space-lg">
+          <div class="space-y-space-sm">
+            <span class="font-label-index text-label-index uppercase tracking-widest text-blood-red font-bold block">
+              [000 // OYUN VE SOSYAL YAŞAM ALANI]
+            </span>
+            
+            <!-- React Bits SplitText animated headline -->
+            <h1 class="split-text-target font-headline-xl text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tighter leading-none text-pure-white font-bold max-w-xl">
+              OYUNUN MERKEZİ.
+            </h1>
+
+            <p class="font-body-lg text-body-lg text-soft-grey max-w-lg pt-space-xs leading-relaxed">
+              PlayStation, turnuva bilardo salonu, masa oyunları ve kafe. Beylikdüzü’nde arkadaşlarınızla buluşup kaliteli vakit geçirebileceğiniz yeni nesil oyun ve sosyalleşme noktası.
+            </p>
+          </div>
+
+          <!-- CTAs: Clean Editorial Action Group -->
+          <div class="flex flex-wrap items-center gap-3 pt-space-xs">
+            <a class="px-6 py-3.5 bg-blood-red hover:bg-pure-white hover:text-charcoal-black text-pure-white font-label-code text-label-code uppercase tracking-wider font-bold transition-all duration-200 flex items-center gap-2 group shadow-lg" href="#game-selector">
+              <span>OYUNLARI İNCELE</span>
+              <span class="material-symbols-outlined text-[16px] group-hover:translate-y-0.5 transition-transform">arrow_downward</span>
+            </a>
+
+            <a class="px-6 py-3.5 bg-carbon-surface hover:bg-pure-white hover:text-charcoal-black text-pure-white font-label-code text-label-code uppercase tracking-wider font-bold transition-all duration-200 flex items-center gap-2 border border-white/20 shadow-sm" href="#visit-venue">
+              <span>YOL TARİFİ AL</span>
+              <span class="material-symbols-outlined text-[16px]">near_me</span>
+            </a>
+
+            <a class="px-4 py-3.5 text-soft-grey hover:text-blood-red font-label-code text-label-code uppercase tracking-wider font-bold transition-colors flex items-center gap-2 border border-white/10 bg-carbon-surface/40" href="tel:+905315869966">
+              <span class="material-symbols-outlined text-[16px] text-blood-red">call</span>
+              <span>+90 531 586 99 66</span>
+            </a>
+          </div>
+
+          <!-- Hero Campaign Callout Card -->
+          <div class="pt-1">
+            <a href="#kampanya" class="group flex flex-col sm:flex-row sm:items-center justify-between p-3.5 bg-carbon-surface/90 hover:bg-carbon-surface border border-blood-red/50 hover:border-blood-red transition-all shadow-xl max-w-xl">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded bg-blood-red/20 border border-blood-red/40 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <span class="material-symbols-outlined text-blood-red text-[22px]">card_giftcard</span>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="font-label-index text-[10px] text-blood-red font-bold uppercase tracking-widest">[MASAYA ÜCRETSİZ İKRAM]</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+                  </div>
+                  <div class="font-label-code text-xs sm:text-sm text-pure-white font-bold tracking-wide group-hover:text-blood-red transition-colors">
+                    2 Saat Oyun Oynayana Patlamış Mısır ve Kola Ücretsiz!
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2 sm:mt-0 flex items-center gap-1 font-label-code text-xs text-blood-red font-bold uppercase tracking-widest self-end sm:self-center">
+                <span>İNCELE</span>
+                <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Stage with Architectural Crimson Framing -->
+        <div class="lg:col-span-6 relative flex items-center justify-center">
+          
+          <!-- Crimson Architectural Accent Frame -->
+          <div class="relative w-full h-[380px] lg:h-[460px] overflow-hidden bg-carbon-surface border border-blood-red/40 p-2 shadow-2xl">
+            <div class="relative w-full h-full overflow-hidden bg-charcoal-black group" id="hero-media-container">
+              <!-- Video Player (Direct Instant Stream, No Poster Flash) -->
+              <video class="w-full h-full object-cover contrast-105 brightness-95 bg-charcoal-black transition-all duration-300" 
+                     autoplay muted loop playsinline preload="auto" 
+                     id="hero-video">
+                <source src="assets/videos/hero-video.mp4" type="video/mp4">
+                <source src="assets/videos/hero-video.webm" type="video/webm">
+              </video>
+              
+              <!-- Subtle Cinematic Vignette -->
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black/85 via-transparent to-black/30 pointer-events-none"></div>
+              
+              <!-- Top Left: Venue Badge -->
+              <div class="absolute top-3 left-3 flex items-center gap-2 pointer-events-none z-20">
+                <div class="px-space-xs py-1 bg-charcoal-black/90 text-pure-white font-label-index text-label-index uppercase tracking-widest border border-white/10 flex items-center gap-1.5 shadow">
+                  <span class="w-2 h-2 rounded-full bg-blood-red animate-pulse"></span>
+                  <span>BEYLİKDÜZÜ // CANLI MEKAN</span>
+                </div>
+              </div>
+
+              <!-- Top Right: Audio & Playback Controls -->
+              <div class="absolute top-3 right-3 flex items-center gap-1.5 z-20">
+                <button type="button" 
+                        id="hero-video-sound-btn" 
+                        class="px-2.5 py-1.5 bg-charcoal-black/85 hover:bg-blood-red text-pure-white font-label-code text-xs uppercase tracking-wider flex items-center gap-1.5 border border-white/20 backdrop-blur-md transition-colors shadow-lg cursor-pointer" 
+                        aria-label="Sesi Aç/Kapat">
+                  <span class="material-symbols-outlined text-[16px]" id="hero-sound-icon">volume_off</span>
+                  <span id="hero-sound-text">SESİ AÇ</span>
+                </button>
+                <button type="button" 
+                        id="hero-video-play-btn" 
+                        class="w-8 h-8 bg-charcoal-black/85 hover:bg-blood-red text-pure-white flex items-center justify-center border border-white/20 backdrop-blur-md transition-colors shadow-lg cursor-pointer" 
+                        aria-label="Oynat/Duraklat">
+                  <span class="material-symbols-outlined text-[18px]" id="hero-play-icon">pause</span>
+                </button>
+              </div>
+
+              <!-- Bottom Badges -->
+              <div class="absolute bottom-3 left-3 z-20 pointer-events-none hidden sm:block">
+                <div class="px-space-xs py-1 bg-charcoal-black/85 text-soft-grey font-label-index text-[11px] uppercase tracking-widest border border-white/10 backdrop-blur-sm">
+                  [000 // 30SN MEKAN TANITIMI]
+                </div>
+              </div>
+              <div class="absolute bottom-3 right-3 px-space-xs py-1 bg-blood-red text-pure-white font-label-code text-label-code uppercase tracking-wider font-bold pointer-events-none z-20 shadow">
+                PLAYSTATION &amp; BİLARDO
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 2. EDITORIAL TICKER & TECHNICAL MANIFESTO (SILVER SURFACE CONTRAST)       -->
+    <!-- ========================================================================= -->
+    <section class="w-full bg-silver-light text-charcoal-black py-space-xl px-margin-mobile lg:px-margin select-none border-b border-black/10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-baseline">
+        <div class="lg:col-span-3 flex flex-col gap-space-xs">
+          <span class="font-label-index text-label-index uppercase tracking-widest text-charcoal-black/70 font-bold">
+            [001 MANİFESTO]
+          </span>
+          <span class="font-title-editorial text-title-editorial uppercase text-charcoal-black font-bold text-lg">
+            SIRADAN SALONLARIN ÖTESİNDE
+          </span>
+        </div>
+
+        <div class="lg:col-span-6">
+          <h2 class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tighter text-charcoal-black leading-tight">
+            BİZ DİJİTAL REKABETİ VE SOSYAL MASALARI AYNI ÇATIDA BİRLEŞTİRİYORUZ.
+          </h2>
+        </div>
+
+        <div class="lg:col-span-3 flex flex-col justify-between gap-space-md">
+          <p class="font-body-md text-body-md text-charcoal-black/80 leading-relaxed">
+            Gürültülü, havasız salon ezberlerini çöpe atın. Mimari aydınlatma, steril iklimlendirme ve birinci sınıf kahve çekirdekleri ile donatılmış yeni nesil bir deneyim merkezi.
+          </p>
+          <a class="flex items-center gap-space-xs font-label-code text-label-code uppercase tracking-wider text-blood-red font-bold hover:underline" href="#visit-venue">
+            <span>BEYLİKDÜZÜ BARIŞ MAHALLESİ</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Duotone Mini Photomontage Triptych -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xl">
+        
+        <!-- Card 1: VIP PS5 Locası (Gerçek Mekan Görseli) -->
+        <div class="relative h-64 bg-charcoal-black overflow-hidden group">
+          <img class="w-full h-full object-cover object-[center_60%] group-hover:scale-105 transition-transform duration-500 brightness-95" 
+               src="assets/images/triptych-lounge.png" 
+               alt="VIP PlayStation Konsol Odası ve Loca">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+          <div class="absolute bottom-3 left-3 bg-charcoal-black text-pure-white px-2 py-1 font-label-index text-label-index uppercase tracking-widest border border-white/10">
+            [ALAN 01 // KONSOL ODALARI]
+          </div>
+        </div>
+
+        <!-- Card 2: Bilardo Arena -->
+        <div class="relative h-64 bg-blood-red overflow-hidden group">
+          <img class="w-full h-full object-cover grayscale contrast-150 mix-blend-multiply group-hover:scale-105 transition-transform duration-500" 
+               src="assets/images/triptych-billiards.jpg" 
+               data-fallback="https://lh3.googleusercontent.com/aida-public/AB6AXuAPXHPfWxiNnd_5de3pBUI95yGM1WrgJe12Mcp_mjnEUUXmB6BesgLO_TmZ0mbJNnKEJ-iEnw0bEovvzvQIxDSEjdbOXxqgjacpVhtxTZ_kH27xR35ZuvXqq2WH_DYM2spuPgYrq6Fz-TPzDNmcRLFN5j3aqsO6yLWNZ2lp19bYTacY7a2szvi67aNC7tuJS3MNjp6QnhrajHzDDU8u6Z_aSFWzZhm80Du5M4qMz2JFdZ1rzZxi2ErwCA" 
+               alt="Alt Kat Turnuva Bilardo Masası">
+          <div class="absolute bottom-3 left-3 bg-pure-white text-blood-red px-2 py-1 font-label-index text-label-index uppercase tracking-widest font-bold">
+            [ALAN 02 // BİLARDO ARENA]
+          </div>
+        </div>
+
+        <!-- Card 3: Kafe & Atıştırmalık İkram (Gerçek Mekan Görseli) -->
+        <div class="relative h-64 bg-charcoal-black overflow-hidden group">
+          <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 brightness-95" 
+               src="assets/images/triptych-snacks.jpg" 
+               alt="Kafe İkram ve Atıştırmalık Çeşitleri">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+          <div class="absolute bottom-3 left-3 bg-charcoal-black text-pure-white px-2 py-1 font-label-index text-label-index uppercase tracking-widest border border-white/10">
+            [ALAN 03 // KAFE VE İKRAM]
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 2. ALAN: SIGNATURE INTERACTIVE GAME SELECTOR (BALANCED HEIGHTS)           -->
+    <!-- ========================================================================= -->
+    <section class="w-full bg-surface-container-lowest text-pure-white py-space-2xl px-margin-mobile lg:px-margin select-none border-b border-white/10" id="game-selector">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between pb-space-lg">
+        <div>
+          <span class="font-label-index text-label-index uppercase tracking-widest text-blood-red block font-bold">
+            [002 // SEÇİM SAHNESİ]
+          </span>
+          <h2 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl uppercase font-bold tracking-tighter text-pure-white mt-space-xs">
+            BUGÜN HANGİ MODDASIN?
+          </h2>
+        </div>
+        <div class="pt-space-sm md:pt-0">
+          <span class="font-label-code text-label-code text-soft-grey uppercase tracking-widest block">
+            [KATALOGDAN SEÇİM YAPIN // BİLGİ ALIN]
+          </span>
+        </div>
+      </div>
+
+      <!-- Interactive Stage Grid with Equal Height Columns -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+        
+        <!-- Left Column: Game List Stack (Stretches to Fill Height) -->
+        <div class="lg:col-span-7 flex flex-col justify-between h-full space-y-space-xs" id="game-list-container" role="tablist" aria-label="Oyun Listesi">
+          
+          <div class="flex flex-col justify-between flex-1 space-y-space-xs">
+            <!-- Game 1: FC 27 (Default Active) -->
+            <div class="game-row active-selection spotlight-card group cursor-pointer p-space-md lg:py-5 lg:px-6 flex-1 flex flex-col justify-center bg-blood-red text-pure-white transition-all duration-200" 
+                 data-game-id="fc27" 
+                 role="tab" 
+                 tabindex="0" 
+                 aria-selected="true" 
+                 aria-controls="preview-stage">
+              <div class="flex items-center justify-between">
+                <div class="flex items-baseline gap-space-md">
+                  <span class="row-index font-label-index text-label-index tracking-widest text-pure-white font-bold">[001]</span>
+                  <span class="font-headline-md text-headline-md uppercase font-bold tracking-tight">EA SPORTS FC 27</span>
+                </div>
+                <span class="row-cat font-label-code text-label-code uppercase tracking-wider text-pure-white font-bold">FUTBOL</span>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs">
+                <span class="row-summary font-body-sm text-body-sm text-pure-white/90 max-w-md">1v1, 2v2 Pro Club &amp; Turnuva Eşleşmeleri</span>
+                <span class="indicator-dot w-2.5 h-2.5 rounded-full bg-pure-white animate-pulse"></span>
+              </div>
+            </div>
+
+            <!-- Game 2: NBA 2K27 -->
+            <div class="game-row spotlight-card group cursor-pointer p-space-md lg:py-5 lg:px-6 flex-1 flex flex-col justify-center bg-carbon-surface text-pure-white hover:bg-carbon-surface/80 transition-all duration-200" 
+                 data-game-id="nba27" 
+                 role="tab" 
+                 tabindex="0" 
+                 aria-selected="false" 
+                 aria-controls="preview-stage">
+              <div class="flex items-center justify-between">
+                <div class="flex items-baseline gap-space-md">
+                  <span class="row-index font-label-index text-label-index tracking-widest text-soft-grey group-hover:text-pure-white/80">[002]</span>
+                  <span class="font-headline-md text-headline-md uppercase font-bold tracking-tight">NBA 2K27</span>
+                </div>
+                <span class="row-cat font-label-code text-label-code uppercase tracking-wider text-soft-grey group-hover:text-pure-white/90">BASKETBOL</span>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs">
+                <span class="row-summary font-body-sm text-body-sm text-soft-grey group-hover:text-pure-white/80 max-w-md">Gerçekçi Parke Dinamikleri &amp; Blacktop</span>
+                <span class="indicator-dot w-2 h-2 rounded-full bg-surface-bright group-hover:bg-blood-red"></span>
+              </div>
+            </div>
+
+            <!-- Game 3: TEKKEN 8 -->
+            <div class="game-row spotlight-card group cursor-pointer p-space-md lg:py-5 lg:px-6 flex-1 flex flex-col justify-center bg-carbon-surface text-pure-white hover:bg-carbon-surface/80 transition-all duration-200" 
+                 data-game-id="tekken8" 
+                 role="tab" 
+                 tabindex="0" 
+                 aria-selected="false" 
+                 aria-controls="preview-stage">
+              <div class="flex items-center justify-between">
+                <div class="flex items-baseline gap-space-md">
+                  <span class="row-index font-label-index text-label-index tracking-widest text-soft-grey group-hover:text-pure-white/80">[003]</span>
+                  <span class="font-headline-md text-headline-md uppercase font-bold tracking-tight">TEKKEN 8</span>
+                </div>
+                <span class="row-cat font-label-code text-label-code uppercase tracking-wider text-soft-grey group-hover:text-pure-white/90">DÖVÜŞ</span>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs">
+                <span class="row-summary font-body-sm text-body-sm text-soft-grey group-hover:text-pure-white/80 max-w-md">1v1 Hızlı Raundlar &amp; Heat Gauge Düellosu</span>
+                <span class="indicator-dot w-2 h-2 rounded-full bg-surface-bright group-hover:bg-blood-red"></span>
+              </div>
+            </div>
+
+            <!-- Game 4: GRAN TURISMO 7 -->
+            <div class="game-row spotlight-card group cursor-pointer p-space-md lg:py-5 lg:px-6 flex-1 flex flex-col justify-center bg-carbon-surface text-pure-white hover:bg-carbon-surface/80 transition-all duration-200" 
+                 data-game-id="gt7" 
+                 role="tab" 
+                 tabindex="0" 
+                 aria-selected="false" 
+                 aria-controls="preview-stage">
+              <div class="flex items-center justify-between">
+                <div class="flex items-baseline gap-space-md">
+                  <span class="row-index font-label-index text-label-index tracking-widest text-soft-grey group-hover:text-pure-white/80">[004]</span>
+                  <span class="font-headline-md text-headline-md uppercase font-bold tracking-tight">GRAN TURISMO 7</span>
+                </div>
+                <span class="row-cat font-label-code text-label-code uppercase tracking-wider text-soft-grey group-hover:text-pure-white/90">YARIŞ</span>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs">
+                <span class="row-summary font-body-sm text-body-sm text-soft-grey group-hover:text-pure-white/80 max-w-md">Pist Mücadelesi &amp; Zaman Karşı Yarış</span>
+                <span class="indicator-dot w-2 h-2 rounded-full bg-surface-bright group-hover:bg-blood-red"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anchored Footnote: Perfectly Closes Column Gap -->
+          <div class="p-space-xs bg-surface-container flex flex-wrap items-center justify-between gap-space-xs mt-space-xs border border-white/5">
+            <span class="font-label-index text-label-index text-on-surface-variant uppercase">
+              [NOT: KONSOL OYUN KATALOĞU DÖNEMSEL GÜNCELLENİR — İŞLETME TEYİDİNE TABİDİR]
+            </span>
+            <span class="font-label-index text-label-index text-pure-white uppercase font-bold">
+              PS5 OYUN SEÇKİSİ
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Dynamic Preview Stage Panel (Equal Height) -->
+        <div class="lg:col-span-5 relative bg-carbon-surface p-space-lg flex flex-col justify-between h-full border border-white/10 spotlight-card shadow-2xl" id="preview-stage" role="tabpanel">
+          <div>
+            <!-- Category & Badge Ribbon -->
+            <div class="flex items-center justify-between pb-space-sm border-b border-white/10">
+              <span class="px-space-xs py-0.5 bg-blood-red text-pure-white font-label-index text-label-index uppercase tracking-widest font-bold" id="preview-badge">
+                POPÜLER TERCİH
+              </span>
+              <span class="font-label-code text-label-code text-soft-grey uppercase tracking-widest" id="preview-cat">
+                FUTBOL / REKABETÇİ
+              </span>
+            </div>
+
+            <!-- Dynamic Game Art Frame (Game Specific Image) -->
+            <div class="relative w-full h-52 bg-charcoal-black overflow-hidden my-space-md border border-white/5">
+              <img class="w-full h-full object-cover grayscale contrast-125 transition-opacity duration-200" 
+                   id="preview-img" 
+                   src="assets/images/game-fc27.jpg" 
+                   alt="Seçili Oyun Görseli">
+              <div class="absolute inset-0 bg-blood-red/20 mix-blend-multiply"></div>
+            </div>
+
+            <!-- Title & Narrative -->
+            <h3 class="font-headline-lg text-2xl lg:text-3xl font-bold uppercase tracking-tight text-pure-white mb-space-xs" id="preview-title">
+              EA SPORTS FC 27
+            </h3>
+            <p class="font-body-md text-body-md text-soft-grey leading-relaxed" id="preview-desc">
+              Yeni nesil futbol heyecanı ve akıcı maç deneyimi. İki veya dört kollu turnuva masalarında arkadaş grubunla kozlarını paylaş.
+            </p>
+
+            <!-- Specs Grid -->
+            <div class="grid grid-cols-3 gap-space-xs my-space-md" id="preview-specs">
+              <div class="p-space-xs bg-surface-container flex flex-col border border-charcoal-black/40">
+                <span class="font-label-index text-label-index text-soft-grey uppercase">[KONTROLÖR]</span>
+                <span class="font-label-code text-label-code text-pure-white font-bold text-xs">Çok Oyunculu Kol</span>
+              </div>
+              <div class="p-space-xs bg-surface-container flex flex-col border border-charcoal-black/40">
+                <span class="font-label-index text-label-index text-soft-grey uppercase">[EKRAN]</span>
+                <span class="font-label-code text-label-code text-pure-white font-bold text-xs">Geniş Ekran TV</span>
+              </div>
+              <div class="p-space-xs bg-surface-container flex flex-col border border-charcoal-black/40">
+                <span class="font-label-index text-label-index text-soft-grey uppercase">[MOD]</span>
+                <span class="font-label-code text-label-code text-pure-white font-bold text-xs">1v1 / 2v2 Turnuva</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Button: Direct Contact / Information -->
+          <div class="pt-space-md border-t border-white/10 mt-space-sm">
+            <a class="block w-full py-space-sm px-space-md bg-blood-red hover:bg-pure-white hover:text-blood-red text-pure-white text-center font-label-code text-label-code uppercase tracking-widest font-bold transition-colors" 
+               id="preview-cta" 
+               href="tel:+905315869966">
+              BİZİ ARA &amp; BİLGİ AL (+90 531 586 99 66)
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. ALAN: PLAYSTATION EXPERIENCE (VERIFIED CONSOLE LOUNGE VISUAL)         -->
+    <!-- ========================================================================= -->
+    <section class="w-full bg-charcoal-black py-space-2xl px-margin-mobile lg:px-margin select-none border-b border-white/10" id="deneyimler">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+        
+        <!-- Left: Hardware & Lounge Narrative -->
+        <div class="lg:col-span-5 flex flex-col gap-space-md">
+          <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">
+            [003 // KONSOL ODALARI]
+          </span>
+          <h2 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl uppercase font-bold tracking-tighter text-pure-white leading-none">
+            PLAYSTATION DENEYİMİ.
+          </h2>
+          <p class="font-body-lg text-body-lg text-soft-grey leading-relaxed">
+            Geniş ekran TV ünitelerinde arkadaş grubunuzla rekabetçi maçlar ve ortak oyun keyfi. Rahat loca oturma alanları, çok oyunculu konsol kontrolcüleri ve oyun akışınız bölünmeden masanıza ulaşan kafe servisi.
+          </p>
+
+          <!-- Verified Features Grid (No Fabricated 120 FPS Guarantees) -->
+          <div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+            <div class="p-space-sm bg-carbon-surface border border-white/5">
+              <span class="font-label-index text-label-index text-soft-grey uppercase block">[ALAN]</span>
+              <span class="font-label-code text-label-code text-pure-white font-bold block">Rahat Loca Düzeni</span>
+            </div>
+            <div class="p-space-sm bg-carbon-surface border border-white/5">
+              <span class="font-label-index text-label-index text-soft-grey uppercase block">[KONTROLÖRLER]</span>
+              <span class="font-label-code text-label-code text-pure-white font-bold block">Çok Oyunculu Kol</span>
+            </div>
+            <div class="p-space-sm bg-carbon-surface border border-white/5">
+              <span class="font-label-index text-label-index text-soft-grey uppercase block">[EKRANLAR]</span>
+              <span class="font-label-code text-label-code text-pure-white font-bold block">Geniş Ekran TV</span>
+            </div>
+            <div class="p-space-sm bg-carbon-surface border border-white/5">
+              <span class="font-label-index text-label-index text-soft-grey uppercase block">[SERVİS]</span>
+              <span class="font-label-code text-label-code text-pure-white font-bold block">Masaya Direkt Servis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Real Console Lounge Visual (Friends on Sofa with Gamepads & Big Screen) -->
+        <div class="lg:col-span-7 relative">
+          <div class="relative h-[380px] lg:h-[480px] w-full overflow-hidden bg-surface-container shadow-2xl border border-white/10">
+            <img class="w-full h-full object-cover grayscale contrast-125 brightness-90" 
+                 src="assets/images/experience-ps5.jpg" 
+                 alt="PlayStation 5 Sosyal Konsol Oyun Alanı ve Loca">
+            <div class="absolute inset-0 bg-gradient-to-r from-charcoal-black/60 via-transparent to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-blood-red text-pure-white font-label-code text-label-code uppercase tracking-wider px-3 py-1 font-bold">
+              KONSOL &amp; LOCA ALANI
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- BİLARDO SALONU (ALT KAT TURNUVA ARENASI) (DEEP RED BRUTAL PANEL)           -->
+    <!-- ========================================================================= -->
+    <section class="w-full bg-blood-red text-pure-white py-space-2xl px-margin-mobile lg:px-margin select-none border-b border-black/20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+        
+        <!-- Left: Underground Billiard Hall Visual -->
+        <div class="lg:col-span-7 order-2 lg:order-1">
+          <div class="relative h-[380px] lg:h-[480px] w-full overflow-hidden bg-charcoal-black shadow-2xl">
+            <img class="w-full h-full object-cover grayscale contrast-150" 
+                 src="assets/images/experience-billiards.jpg" 
+                 data-fallback="https://lh3.googleusercontent.com/aida-public/AB6AXuAFQTHSuU1b7DOiQPd0sngQhJ6gN7H5aroaNihRcRRAPkN5_wuZchNtH4WJPg8shyBL4l85qi5_zt2EzMMHLf6fL1H6bD5bdIWsGeJ3ZvjDk7p9NWLvFFa792e2gCVL0xQNer4AsIsrcJoYwS7esjTQU1qr6uTabTc4oOLejfYNZTEZ0LquQiGwKGh2W20_P1VA5pOqhV8USCRz6h0AWnqrwtWBNK6VZZdY-CbfejoT1JWNAxx7Ufb_7Q"
+                 alt="Alt Kat Turnuva Bilardo Masaları">
+            <div class="absolute inset-0 bg-blood-red/30 mix-blend-multiply"></div>
+            <div class="absolute bottom-4 left-4 p-space-xs bg-charcoal-black font-label-index text-label-index uppercase tracking-widest text-pure-white">
+              [ALT KAT // SIFIR TİTREŞİMLİ DÜZLEMLER]
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Billiards Narrative & Verified Details -->
+        <div class="lg:col-span-5 order-1 lg:order-2 flex flex-col gap-space-md">
+          <span class="font-label-index text-label-index uppercase tracking-widest text-pure-white/80 font-bold">
+            [004 // KLASİK DİSİPLİN]
+          </span>
+          <h2 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl uppercase font-bold tracking-tighter text-pure-white leading-none">
+            ALT KAT TURNUVA BİLARDO SALONU.
+          </h2>
+          <p class="font-body-lg text-body-lg text-pure-white/90 leading-relaxed">
+            Dijital ekranlardan başını kaldırıp yeşil çuhada strateji geliştirmek isteyenlere. Alt katta, izole ve odaklanmış turnuva standartlarında ıstaka ve toplar.
+          </p>
+
+          <ul class="space-y-space-xs font-label-code text-label-code uppercase tracking-wider text-pure-white/90">
+            <li class="flex items-center gap-space-xs">
+              <span class="w-1.5 h-1.5 bg-pure-white"></span>
+              <span>Hassas Terazi Dengeli İtalyan Mermer Masalar</span>
+            </li>
+            <li class="flex items-center gap-space-xs">
+              <span class="w-1.5 h-1.5 bg-pure-white"></span>
+              <span>Aramith Pro Turnuva Top Setleri</span>
+            </li>
+            <li class="flex items-center gap-space-xs">
+              <span class="w-1.5 h-1.5 bg-pure-white"></span>
+              <span>Haftalık Beylikdüzü Topluluk Buluşmaları</span>
+            </li>
+          </ul>
+
+          <div class="pt-space-xs">
+            <a class="inline-block px-space-md py-space-sm bg-pure-white text-blood-red hover:bg-charcoal-black hover:text-pure-white font-label-code text-label-code uppercase tracking-widest font-bold transition-colors shadow-lg" href="tel:+905315869966">
+              BİLARDO MASASI HAKKINDA BİLGİ AL
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 005: MASAÜSTÜ STRATEJİ & KUTU OYUNLARI                                    -->
+    <!-- ========================================================================= -->
+    <section class="w-full bg-surface-container py-space-xl px-margin-mobile lg:px-margin text-pure-white select-none border-b border-white/10" id="masa-oyunlari">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+          <div>
+            <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold block mb-space-xs">
+              [005 // MASAÜSTÜ OYUN ARŞİVİ]
+            </span>
+            <h2 class="font-headline-xl text-3xl sm:text-4xl uppercase font-bold tracking-tighter text-pure-white leading-none">
+              KUTU OYUNLARI &amp; STRATEJİ.
+            </h2>
+          </div>
+          <p class="font-body-md text-body-md text-soft-grey max-w-lg leading-relaxed">
+            Catan, Carcassonne, Dixit, Coup, Secret Hitler ve eğlenceli parti oyunları. Masalarınızda arkadaş grubunuzla saatler sürecek strateji ve taktik rekabeti.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-xs">
+          <div class="p-space-md bg-carbon-surface text-center border border-white/5 hover:border-blood-red/40 transition-colors">
+            <span class="block font-label-code text-pure-white font-bold text-sm">CATAN</span>
+            <span class="text-[10px] text-soft-grey uppercase tracking-widest mt-1 block">Ticaret &amp; Yerleşim</span>
+          </div>
+          <div class="p-space-md bg-carbon-surface text-center border border-white/5 hover:border-blood-red/40 transition-colors">
+            <span class="block font-label-code text-pure-white font-bold text-sm">CARCASSONNE</span>
+            <span class="text-[10px] text-soft-grey uppercase tracking-widest mt-1 block">Harita Hakimiyeti</span>
+          </div>
+          <div class="p-space-md bg-carbon-surface text-center border border-white/5 hover:border-blood-red/40 transition-colors">
+            <span class="block font-label-code text-pure-white font-bold text-sm">DIXIT</span>
+            <span class="text-[10px] text-soft-grey uppercase tracking-widest mt-1 block">İpucu &amp; Hayal Gücü</span>
+          </div>
+          <div class="p-space-md bg-carbon-surface text-center border border-white/5 hover:border-blood-red/40 transition-colors">
+            <span class="block font-label-code text-pure-white font-bold text-sm">COUP</span>
+            <span class="text-[10px] text-soft-grey uppercase tracking-widest mt-1 block">Blöf &amp; Hamle</span>
+          </div>
+          <div class="p-space-md bg-carbon-surface text-center border border-white/5 hover:border-blood-red/40 transition-colors">
+            <span class="block font-label-code text-pure-white font-bold text-sm">SECRET HITLER</span>
+            <span class="text-[10px] text-soft-grey uppercase tracking-widest mt-1 block">Sosyal Çıkarım</span>
+          </div>
+          <div class="p-space-md bg-carbon-surface text-center border border-white/5 hover:border-blood-red/40 transition-colors">
+            <span class="block font-label-code text-pure-white font-bold text-sm">TABU &amp; JENGA</span>
+            <span class="text-[10px] text-soft-grey uppercase tracking-widest mt-1 block">Refleks &amp; Parti</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 006: DİJİTAL MENÜ & ARTISAN CAFE BAR (QR CODE ENTEGRASYONU)               -->
+    <!-- ========================================================================= -->
+    <section class="w-full bg-charcoal-black py-space-2xl px-margin-mobile lg:px-margin text-pure-white select-none border-b border-white/10" id="menu">
+      <div class="max-w-7xl mx-auto space-y-space-xl">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md border-b border-white/10 pb-space-lg">
+          <div>
+            <div class="flex items-center gap-space-xs mb-space-xs">
+              <span class="w-2 h-2 rounded-full bg-blood-red animate-pulse"></span>
+              <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">
+                [006 // DİJİTAL MENÜ &amp; CAFE BAR]
+              </span>
+            </div>
+            <h2 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl uppercase font-bold tracking-tighter text-pure-white leading-none">
+              KAFE &amp; MUTFAK MENÜSÜ.
+            </h2>
+          </div>
+          <p class="font-body-md text-body-md text-soft-grey max-w-xl leading-relaxed">
+            Oyun akışınızı bölmeden doğrudan masanıza servis edilen taze demleme espresso çeşitleri, soğuk içecekler, çıtır gurme tostlar ve sıcak tavuk pilav. Masadaki QR kodu okutarak güncel fiyatları anında inceleyebilirsiniz.
+          </p>
+        </div>
+
+        <!-- ===================================================================== -->
+        <!-- QR CODE SYSTEM & TABLE STAND SHOWCASE BANNER                          -->
+        <!-- ===================================================================== -->
+        <div class="bg-carbon-surface border border-white/15 p-space-lg lg:p-space-xl shadow-2xl relative overflow-hidden group">
+          <!-- Background Subtle Gradient & Grid Texture -->
+          <div class="absolute -right-16 -top-16 w-80 h-80 bg-blood-red/10 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center relative z-10">
+            
+            <!-- Left: QR Code Preview with High-Tech Reticle -->
+            <div class="lg:col-span-4 flex flex-col items-center justify-center">
+              <div class="relative p-4 bg-pure-white rounded-lg shadow-2xl border-4 border-charcoal-black group-hover:scale-105 transition-transform duration-300">
+                <!-- Reticle Corner Accents -->
+                <div class="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-blood-red"></div>
+                <div class="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-blood-red"></div>
+                <div class="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-blood-red"></div>
+                <div class="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-blood-red"></div>
+
+                <!-- QR Container (Rendered dynamically via qrcodejs or static SVG) -->
+                <div id="menu-qrcode-container" class="w-44 h-44 sm:w-48 sm:h-48 flex items-center justify-center overflow-hidden">
+                  <img src="assets/images/menu/qr-menu.png" 
+                       alt="Neo Game Cafe Dijital Menü QR Kodu" 
+                       class="w-full h-full object-contain"
+                       id="menu-qrcode-fallback">
+                </div>
+              </div>
+              
+              <div class="mt-3 flex items-center gap-1.5 font-label-index text-[11px] text-pure-white uppercase tracking-widest font-bold">
+                <span class="material-symbols-outlined text-blood-red text-[16px]">qr_code_scanner</span>
+                <span>TELEFON KAMERASIYLA OKUTUN</span>
+              </div>
+            </div>
+
+            <!-- Right: QR Code System Details & Action Buttons -->
+            <div class="lg:col-span-8 flex flex-col justify-between space-y-space-md">
+              <div>
+                <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-blood-red text-pure-white font-label-index text-label-index uppercase tracking-widest font-bold mb-space-xs">
+                  <span>MASAYA ÖZEL DİJİTAL MENÜ (QR)</span>
+                </div>
+                <h3 class="font-headline-lg text-2xl lg:text-3xl font-bold uppercase tracking-tight text-pure-white">
+                  HER MASADA KESİNTİSİZ ERİŞİM.
+                </h3>
+                <p class="font-body-md text-body-md text-soft-grey leading-relaxed mt-2">
+                  Masalarınızdaki akrilik standlarda yer alan QR kodu akıllı telefonunuzla tarattığınızda doğrudan sitemizin bu menü sekmesine yönlendirilirsiniz. Ekstra mobil uygulama indirmeye gerek kalmadan tüm içecek ve tost çeşitlerimizin güncel porsiyon ve fiyatlarını inceleyebilirsiniz.
+                </p>
+              </div>
+
+              <!-- Customer Friendly Highlights (No Administrative / Print Triggers) -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs pt-space-xs">
+                <div class="p-space-sm bg-charcoal-black border border-white/10 flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-blood-red text-[20px]">qr_code_scanner</span>
+                  <div>
+                    <span class="font-label-code text-xs text-pure-white font-bold block">Uygulamasız Erişim</span>
+                    <span class="font-body-sm text-[11px] text-soft-grey block">Kamera ile anında tara</span>
+                  </div>
+                </div>
+                <div class="p-space-sm bg-charcoal-black border border-white/10 flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-blood-red text-[20px]">room_service</span>
+                  <div>
+                    <span class="font-label-code text-xs text-pure-white font-bold block">Masaya Direkt Servis</span>
+                    <span class="font-body-sm text-[11px] text-soft-grey block">Oyun akışın bölünmesin</span>
+                  </div>
+                </div>
+                <div class="p-space-sm bg-charcoal-black border border-white/10 flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-blood-red text-[20px]">verified</span>
+                  <div>
+                    <span class="font-label-code text-xs text-pure-white font-bold block">Canlı Senkronize</span>
+                    <span class="font-body-sm text-[11px] text-soft-grey block">%100 güncel fiyatlar</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===================================================================== -->
+        <!-- 006.B: ÖZEL OYUN KAMPANYASI (2 SAAT OYNAYANA MISIR & KOLA ÜCRETSİZ)   -->
+        <!-- ===================================================================== -->
+        <div id="kampanya" class="relative bg-gradient-to-br from-carbon-surface via-charcoal-black to-carbon-surface border-2 border-blood-red shadow-2xl p-space-lg lg:p-space-xl overflow-hidden group">
+          
+          <!-- Luminous Crimson Glow Accents -->
+          <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-blood-red/20 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-20 -top-20 w-72 h-72 bg-blood-red/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+            
+            <!-- Left 7 Cols: Narrative, Perks & Claim Button -->
+            <div class="lg:col-span-7 space-y-space-md">
+              
+              <!-- Badges & Status -->
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-blood-red text-pure-white font-label-index text-xs font-bold uppercase tracking-widest shadow-md">
+                  <span class="w-2 h-2 rounded-full bg-pure-white animate-pulse"></span>
+                  <span>ÖZEL SALON KAMPANYASI</span>
+                </span>
+                <span class="px-2.5 py-1 bg-charcoal-black border border-white/10 text-emerald-400 font-label-index text-xs font-bold uppercase tracking-widest flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  GÜNCEL &amp; AKTİF
+                </span>
+              </div>
+
+              <!-- Main Title -->
+              <div>
+                <h3 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-pure-white leading-tight">
+                  2 SAAT OYNAYANA<br>
+                  <span class="text-blood-red">PATLAMIŞ MISIR &amp; KOLA</span> ÜCRETSİZ!
+                </h3>
+                <p class="font-body-md text-body-md text-soft-grey leading-relaxed mt-space-sm max-w-xl">
+                  Oyun maratonunuzu sıcak lezzet ve buz gibi ferahlıkla taçlandırıyoruz. PlayStation 5 VIP salonlarımızda, alt kat turnuva bilardo masalarımızda veya masa oyunlarında kesintisiz 2 saat ve üzeri seans alan her misafirimize çıtır taze patlamış mısır ve buz gibi kutu Coca-Cola masaya ikram!
+                </p>
+              </div>
+
+              <!-- Perks Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-space-xs">
+                <div class="p-3 bg-charcoal-black/90 border border-white/10 flex flex-col justify-between">
+                  <span class="font-label-index text-[10px] text-soft-grey uppercase tracking-widest block">[01 // ŞART]</span>
+                  <span class="font-label-code text-xs text-pure-white font-bold mt-1 block">Min. 2 Saat Oyun</span>
+                  <span class="text-[11px] text-soft-grey mt-0.5 block">PS5, Bilardo veya Kutu Oyunları</span>
+                </div>
+                <div class="p-3 bg-charcoal-black/90 border border-blood-red/40 flex flex-col justify-between">
+                  <span class="font-label-index text-[10px] text-blood-red uppercase tracking-widest block font-bold">[02 // İKRAM 1]</span>
+                  <span class="font-label-code text-xs text-pure-white font-bold mt-1 block">Sıcak Patlamış Mısır</span>
+                  <span class="text-[11px] text-soft-grey mt-0.5 block">Taze patlatılmış sinema boy</span>
+                </div>
+                <div class="p-3 bg-charcoal-black/90 border border-blood-red/40 flex flex-col justify-between">
+                  <span class="font-label-index text-[10px] text-blood-red uppercase tracking-widest block font-bold">[03 // İKRAM 2]</span>
+                  <span class="font-label-code text-xs text-pure-white font-bold mt-1 block">Kutu Coca-Cola</span>
+                  <span class="text-[11px] text-soft-grey mt-0.5 block">Buz gibi soğuk kutu (330ml)</span>
+                </div>
+              </div>
+
+              <!-- Action & Pricing Bar -->
+              <div class="flex flex-wrap items-center gap-4 pt-space-xs">
+                <a href="tel:+905315869966" class="px-6 py-3.5 bg-blood-red hover:bg-pure-white hover:text-charcoal-black text-pure-white font-label-code text-label-code uppercase tracking-wider font-bold transition-all shadow-xl flex items-center gap-2 group">
+                  <span class="material-symbols-outlined text-[18px]">call</span>
+                  <span>HEMEN MASANI AYIRT (+90 531 586 99 66)</span>
+                </a>
+                
+                <div class="flex items-center gap-2 px-3 py-2 bg-charcoal-black border border-white/10">
+                  <span class="text-xs text-soft-grey line-through font-label-code">80 ₺ + MISIR</span>
+                  <span class="font-headline-md text-xl text-emerald-400 font-bold uppercase tracking-tight">0 ₺ İKRAM</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right 5 Cols: Visual Treat Duo (Popcorn Box & Cold Coca-Cola Can) -->
+            <div class="lg:col-span-5 relative flex items-center justify-center">
+              
+              <!-- Frame container -->
+              <div class="relative w-full max-w-md h-72 sm:h-80 bg-gradient-to-t from-black/80 via-charcoal-black/40 to-transparent border border-white/15 p-4 rounded-lg flex items-end justify-center gap-2 overflow-hidden shadow-2xl">
+                
+                <!-- Background stamp badge -->
+                <div class="absolute top-3 right-3 bg-blood-red text-pure-white font-label-code text-xs uppercase tracking-widest font-bold px-3 py-1 shadow-lg border border-white/20 z-20 animate-pulse">
+                  %100 HEDİYE
+                </div>
+                
+                <div class="absolute top-3 left-3 bg-charcoal-black/90 text-soft-grey font-label-index text-[10px] uppercase tracking-widest px-2.5 py-1 border border-white/10 z-20">
+                  [İKRAM COMBO]
+                </div>
+
+                <!-- Popcorn Box Image -->
+                <div class="relative z-10 w-44 sm:w-52 h-64 sm:h-72 flex items-end justify-center transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                  <img src="assets/images/menu/popcorn.png" 
+                       alt="Taze Sıcak Patlamış Mısır" 
+                       class="max-h-full max-w-full object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.9)]">
+                </div>
+
+                <!-- Coca-Cola Can Image -->
+                <div class="relative z-10 w-28 sm:w-32 h-48 sm:h-56 flex items-end justify-center transform translate-y-2 rotate-6 hover:rotate-0 transition-transform duration-300 -ml-6">
+                  <img src="assets/images/menu/coca-cola.png" 
+                       alt="Buz Gibi Kutu Coca-Cola" 
+                       class="max-h-full max-w-full object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.9)]">
+                </div>
+
+                <!-- Bottom Floor Reflection -->
+                <div class="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-blood-red/20 to-transparent pointer-events-none"></div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===================================================================== -->
+        <!-- CATEGORY FILTER TABS                                                  -->
+        <!-- ===================================================================== -->
+        <div class="flex flex-wrap items-center gap-2 border-b border-white/10 pb-space-sm" role="tablist" aria-label="Menü Kategorileri">
+          <button type="button" 
+                  role="tab" 
+                  aria-selected="true" 
+                  data-menu-category="all" 
+                  class="menu-filter-btn px-4 py-2 font-label-code text-label-code uppercase tracking-wider font-bold transition-all bg-blood-red text-pure-white shadow-md">
+            TÜMÜ (16)
+          </button>
+          
+          <button type="button" 
+                  role="tab" 
+                  aria-selected="false" 
+                  data-menu-category="kahveler" 
+                  class="menu-filter-btn px-4 py-2 font-label-code text-label-code uppercase tracking-wider font-bold transition-all bg-carbon-surface text-soft-grey hover:text-pure-white border border-white/10">
+            KAHVELER (6)
+          </button>
+          
+          <button type="button" 
+                  role="tab" 
+                  aria-selected="false" 
+                  data-menu-category="soguk-icecekler" 
+                  class="menu-filter-btn px-4 py-2 font-label-code text-label-code uppercase tracking-wider font-bold transition-all bg-carbon-surface text-soft-grey hover:text-pure-white border border-white/10">
+            SOĞUK İÇECEKLER (6)
+          </button>
+          
+          <button type="button" 
+                  role="tab" 
+                  aria-selected="false" 
+                  data-menu-category="mutfak-tost" 
+                  class="menu-filter-btn px-4 py-2 font-label-code text-label-code uppercase tracking-wider font-bold transition-all bg-carbon-surface text-soft-grey hover:text-pure-white border border-white/10">
+            MUTFAK &amp; TOSTLAR (4)
+          </button>
+
+          <!-- Store Lightbox Reference Badge -->
+          <div class="ml-auto hidden sm:flex items-center gap-2 text-xs font-label-code text-soft-grey">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            <span>MASAYA SERVİS AKTİF</span>
+          </div>
+        </div>
+
+        <!-- ===================================================================== -->
+        <!-- MENU ITEMS GRID (ALL 16 REAL VERIFIED ITEMS)                          -->
+        <!-- ===================================================================== -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-space-md" id="menu-items-grid">
+          
+          <!-- ITEM 00: KAMPANYA COMBO (PATLAMIŞ MISIR & KOLA) -->
+          <div class="menu-item-card bg-gradient-to-b from-blood-red/15 to-carbon-surface border-2 border-blood-red/60 hover:border-blood-red transition-all duration-300 p-space-md flex flex-col justify-between group shadow-xl hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="all soguk-icecekler mutfak-tost">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-blood-red/20">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blood-red animate-pulse"></span>
+                  ÖZEL KAMPANYA
+                </span>
+                <span class="font-label-code text-label-code text-pure-white bg-blood-red px-1.5 py-0.5 text-[10px] font-bold uppercase">HEDİYE</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-blood-red/20 flex items-center justify-center gap-1 overflow-hidden group-hover:border-blood-red/40 transition-colors">
+                <img src="assets/images/menu/popcorn.png" alt="Patlamış Mısır" class="h-36 max-w-[50%] object-contain -rotate-3 group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+                <img src="assets/images/menu/coca-cola.png" alt="Coca Cola" class="h-28 max-w-[40%] object-contain rotate-6 group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)] -ml-4">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">2 Saat Oyun + Mısır &amp; Kola</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">2 saat ve üzeri konsol veya bilardo seansınızda sıcak patlamış mısır ve kutu kola ikramımızdır.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-blood-red/20 flex items-center justify-between gap-2">
+              <div class="flex-1 bg-charcoal-black p-1.5 text-center border border-white/5">
+                <span class="font-label-index text-[10px] text-soft-grey block uppercase">Normal Değer</span>
+                <span class="font-label-code text-soft-grey line-through text-sm">80 ₺ + Mısır</span>
+              </div>
+              <div class="flex-1 bg-blood-red p-1.5 text-center border border-blood-red">
+                <span class="font-label-index text-[10px] text-pure-white/90 block uppercase font-bold">2+ Saat Oyun</span>
+                <span class="font-label-code text-pure-white font-bold text-sm">0 ₺ ÜCRETSİZ</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- ITEM 1: ICE LATTE -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="kahveler">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">SOĞUK KAHVE</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[01]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/ice-latte.png" alt="Ice Latte" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Ice Latte</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Taze çekilmiş espresso shot, soğuk süt ve buz dengesi.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between gap-2">
+              <div class="flex-1 bg-charcoal-black p-1.5 text-center border border-white/5">
+                <span class="font-label-index text-[10px] text-soft-grey block uppercase">Küçük</span>
+                <span class="font-label-code text-pure-white font-bold text-sm">100 ₺</span>
+              </div>
+              <div class="flex-1 bg-blood-red/20 p-1.5 text-center border border-blood-red/40">
+                <span class="font-label-index text-[10px] text-pure-white/80 block uppercase">Orta</span>
+                <span class="font-label-code text-pure-white font-bold text-sm">150 ₺</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 2: ICE AMERICANO -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="kahveler">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">SOĞUK KAHVE</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[02]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/ice-americano.png" alt="Ice Americano" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Ice Americano</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Yoğun çift shot espresso ve soğuk filtrelenmiş su ferahlığı.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between gap-2">
+              <div class="flex-1 bg-charcoal-black p-1.5 text-center border border-white/5">
+                <span class="font-label-index text-[10px] text-soft-grey block uppercase">Küçük</span>
+                <span class="font-label-code text-pure-white font-bold text-sm">100 ₺</span>
+              </div>
+              <div class="flex-1 bg-blood-red/20 p-1.5 text-center border border-blood-red/40">
+                <span class="font-label-index text-[10px] text-pure-white/80 block uppercase">Orta</span>
+                <span class="font-label-code text-pure-white font-bold text-sm">150 ₺</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 3: COLD BREW -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="kahveler">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">ÖZEL DEMLEME</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[03]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/cold-brew.png" alt="Cold Brew" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Cold Brew</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">18 saat yavaş soğuk damıtma, düşük asiditeli pürüzsüz gövde.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between gap-2">
+              <div class="flex-1 bg-charcoal-black p-1.5 text-center border border-white/5">
+                <span class="font-label-index text-[10px] text-soft-grey block uppercase">Küçük</span>
+                <span class="font-label-code text-pure-white font-bold text-sm">100 ₺</span>
+              </div>
+              <div class="flex-1 bg-blood-red/20 p-1.5 text-center border border-blood-red/40">
+                <span class="font-label-index text-[10px] text-pure-white/80 block uppercase">Orta</span>
+                <span class="font-label-code text-pure-white font-bold text-sm">150 ₺</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 4: LATTE (HOT) -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="kahveler">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">SICAK KAHVE</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[04]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/latte.png" alt="Latte" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Latte</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">İpeksi mikro köpük, kadifemsi sıcak süt ve taze espresso.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between gap-2">
+              <div class="flex-1 bg-charcoal-black p-1.5 text-center border border-white/5">
+                <span class="font-label-index text-[10px] text-soft-grey block uppercase">Küçük</span>
+                <span class="font-label-code text-pure-white font-bold text-sm">100 ₺</span>
+              </div>
+              <div class="flex-1 bg-blood-red/20 p-1.5 text-center border border-blood-red/40">
+                <span class="font-label-index text-[10px] text-pure-white/80 block uppercase">Orta</span>
+                <span class="font-label-code text-pure-white font-bold text-sm">150 ₺</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 5: ESPRESSO -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="kahveler">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">YOĞUN KAVRUM</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[05]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/espresso.png" alt="Espresso" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Espresso</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Yüksek basınç altında çekilen altın kremalı saf yoğun espresso.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between gap-2">
+              <div class="flex-1 bg-charcoal-black p-1.5 text-center border border-white/5">
+                <span class="font-label-index text-[10px] text-soft-grey block uppercase">Tek Shot</span>
+                <span class="font-label-code text-pure-white font-bold text-sm">100 ₺</span>
+              </div>
+              <div class="flex-1 bg-blood-red/20 p-1.5 text-center border border-blood-red/40">
+                <span class="font-label-index text-[10px] text-pure-white/80 block uppercase">Double</span>
+                <span class="font-label-code text-pure-white font-bold text-sm">150 ₺</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 6: DEMLEME ÇAY -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="kahveler">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">KLASİK DEMLEME</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[06]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/tea.png" alt="Demleme Çay" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Demleme Çay</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Taze demlenmiş geleneksel Karadeniz harmanı berrak ince belli çay.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between">
+              <span class="font-label-code text-xs text-soft-grey uppercase">İnce Belli Bardak</span>
+              <span class="px-3 py-1 bg-blood-red text-pure-white font-label-code text-base font-bold shadow">40 ₺</span>
+            </div>
+          </div>
+
+          <!-- ITEM 7: COCA-COLA -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="soguk-icecekler">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">SOĞUK MEŞRUBAT</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[07]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/coca-cola.png" alt="Coca-Cola" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Coca-Cola</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Buz gibi soğuk kutu servis edilen orijinal lezzet.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between">
+              <span class="font-label-code text-xs text-soft-grey uppercase">Kutu 330ml</span>
+              <span class="px-3 py-1 bg-blood-red text-pure-white font-label-code text-base font-bold shadow">80 ₺</span>
+            </div>
+          </div>
+
+          <!-- ITEM 8: RED BULL -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="soguk-icecekler">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">ENERJİ &amp; ODAK</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[08]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/red-bull.png" alt="Red Bull Enerji İçeceği" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Red Bull</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Uzun turnuvalarda ve maraton maçlarda yüksek zihinsel odak.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between">
+              <span class="font-label-code text-xs text-soft-grey uppercase">Kutu 250ml</span>
+              <span class="px-3 py-1 bg-blood-red text-pure-white font-label-code text-base font-bold shadow">100 ₺</span>
+            </div>
+          </div>
+
+          <!-- ITEM 9: ICE TEA -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="soguk-icecekler">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">BUZLU ÇAY</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[09]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/ice-tea.png" alt="Ice Tea" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Ice Tea</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Ferahlatıcı şeftali veya limon meyve aromalı soğuk çay.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between">
+              <span class="font-label-code text-xs text-soft-grey uppercase">Kutu 330ml</span>
+              <span class="px-3 py-1 bg-blood-red text-pure-white font-label-code text-base font-bold shadow">80 ₺</span>
+            </div>
+          </div>
+
+          <!-- ITEM 10: ÇAMLICA GAZOZ -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="soguk-icecekler">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">KLASİK GAZOZ</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[10]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/camlica-gazoz.png" alt="Çamlıca Gazoz" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Çamlıca Gazoz</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Nostaljik cam şişe ferahlığı, buz gibi servis.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between">
+              <span class="font-label-code text-xs text-soft-grey uppercase">Cam Şişe 250ml</span>
+              <span class="px-3 py-1 bg-blood-red text-pure-white font-label-code text-base font-bold shadow">50 ₺</span>
+            </div>
+          </div>
+
+          <!-- ITEM 11: SODA / MADEN SUYU -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="soguk-icecekler">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">DOĞAL MİNERAL</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[11]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/lemon-soda.png" alt="Soda Limon Elma Sade" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Soda / Maden Suyu</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Limonlu, elmalı veya sade doğal mineralli kaynak suyu.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between">
+              <span class="font-label-code text-xs text-soft-grey uppercase">Limon / Elma / Sade</span>
+              <span class="px-3 py-1 bg-blood-red text-pure-white font-label-code text-base font-bold shadow">40 ₺</span>
+            </div>
+          </div>
+
+          <!-- ITEM 12: SU -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="soguk-icecekler">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">KAYNAK SUYU</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[12]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/water-bottle.png" alt="Su" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Doğal Kaynak Suyu</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Serinletici dengeli pH değerli soğuk şişe su.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between">
+              <span class="font-label-code text-xs text-soft-grey uppercase">Şişe 500ml</span>
+              <span class="px-3 py-1 bg-blood-red text-pure-white font-label-code text-base font-bold shadow">20 ₺</span>
+            </div>
+          </div>
+
+          <!-- ITEM 13: KAŞARLI TOST -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="mutfak-tost">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">SICAK TOST</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[13]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/sandwich-kasarli.png" alt="Kaşarlı Tost" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Kaşarlı Tost</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Tereyağlı çıtır ekmek arasında bol eriyen taze kaşar peyniri.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between">
+              <span class="font-label-code text-xs text-soft-grey uppercase">Porsiyon</span>
+              <span class="px-3 py-1 bg-blood-red text-pure-white font-label-code text-base font-bold shadow">150 ₺</span>
+            </div>
+          </div>
+
+          <!-- ITEM 14: KARIŞIK TOST -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="mutfak-tost">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">ŞEFİN TAVSİYESİ</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[14]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/sandwich-karisik.png" alt="Karışık Tost" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Karışık Tost</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Baharatlı kaliteli kasap sucuk, bol kaşar peyniri ve tereyağı.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between">
+              <span class="font-label-code text-xs text-soft-grey uppercase">Porsiyon</span>
+              <span class="px-3 py-1 bg-blood-red text-pure-white font-label-code text-base font-bold shadow">220 ₺</span>
+            </div>
+          </div>
+
+          <!-- ITEM 15: KARIŞIK BOL SUCUKLU TOST -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="mutfak-tost">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">MAKSİMUM LEZZET</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[15]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/sandwich-bol-sucuklu.png" alt="Karışık Bol Sucuklu Tost" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Karışık Bol Sucuklu Tost</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Ekstra çift porsiyon kasap sucuğu ve bol kaşar şöleni.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between">
+              <span class="font-label-code text-xs text-soft-grey uppercase">Doyurucu Porsiyon</span>
+              <span class="px-3 py-1 bg-blood-red text-pure-white font-label-code text-base font-bold shadow">240 ₺</span>
+            </div>
+          </div>
+
+          <!-- ITEM 16: TAVUK PİLAV -->
+          <div class="menu-item-card bg-carbon-surface border border-white/10 hover:border-blood-red/60 transition-all duration-300 p-space-md flex flex-col justify-between group shadow-lg hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden spotlight-card" data-category="mutfak-tost">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-white/5">
+                <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">ANA ÖĞÜN</span>
+                <span class="font-label-code text-label-code text-soft-grey uppercase">[16]</span>
+              </div>
+              <div class="relative w-full h-44 my-space-sm bg-gradient-to-b from-white/[0.04] to-transparent rounded border border-white/5 flex items-center justify-center overflow-hidden group-hover:border-blood-red/30 transition-colors">
+                <img src="assets/images/menu/tavuk-pilav.png" alt="Tavuk Pilav" class="max-h-36 max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_10px_15px_rgba(0,0,0,0.8)]">
+              </div>
+              <h4 class="font-headline-md text-xl uppercase font-bold tracking-tight text-pure-white group-hover:text-blood-red transition-colors">Tavuk Pilav</h4>
+              <p class="font-body-sm text-body-sm text-soft-grey mt-1 leading-relaxed min-h-[38px]">Tereyağlı, nohutlu sıcak tane tane pirinç pilavı üzerinde bol tiftik tavuk göğsü.</p>
+            </div>
+            <div class="mt-space-md pt-space-xs border-t border-white/5 flex items-center justify-between">
+              <span class="font-label-code text-xs text-soft-grey uppercase">Doyurucu Tabak</span>
+              <span class="px-3 py-1 bg-blood-red text-pure-white font-label-code text-base font-bold shadow">220 ₺</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+    <!-- ========================================================================= -->
+    <!-- 007: MEKAN VE ATMOSFER (GERÇEK FOTOĞRAF PANELİ & BENTO GRID)            -->
+    <!-- ========================================================================= -->
+    <section class="w-full bg-surface-container py-space-2xl px-margin-mobile lg:px-margin select-none border-b border-white/10 scroll-mt-24" id="mekan-galeri">
+      <div class="max-w-7xl mx-auto space-y-space-xl">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md border-b border-white/10 pb-space-lg">
+          <div>
+            <div class="flex items-center gap-space-xs mb-space-xs">
+              <span class="w-2 h-2 rounded-full bg-blood-red animate-pulse"></span>
+              <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">
+                [007 // MEKAN &amp; ATMOSFER]
+              </span>
+            </div>
+            <h2 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl uppercase font-bold tracking-tighter text-pure-white leading-none">
+              MEKANDAN KARELER.
+            </h2>
+          </div>
+          <p class="font-body-md text-body-md text-soft-grey max-w-xl leading-relaxed">
+            Barış Mahallesi Konformist Residence’taki salonumuzun dış cephesi, geniş ekranlı VIP PlayStation odaları, özel neo CAFE kabinleri, taze kahve barımız ve ışıklı menü panomuz. Karelere tıklayarak tam boyutta inceleyebilirsiniz.
+          </p>
+        </div>
+
+        <!-- Bento Grid Gallery Stage (5 Real In-Store Photos) -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+          
+          <!-- Card 1: Facade & Exterior (Featured 7 cols) -->
+          <div class="gallery-item md:col-span-7 relative h-72 sm:h-80 lg:h-96 bg-carbon-surface border border-white/10 hover:border-blood-red/80 transition-all duration-300 overflow-hidden group cursor-pointer shadow-xl spotlight-card"
+               data-gallery-idx="0"
+               data-img="assets/images/venue/venue-4.jpg"
+               data-title="Dış Cephe &amp; Cadde Girişi"
+               data-tag="CADDE GİRİŞİ"
+               data-desc="Konformist Residence önü müstakil girişimiz, dış oturma alanı ve kırmızı LED tabelamız. Makyol Starbucks karşısı.">
+            <img src="assets/images/venue/venue-4.jpg" 
+                 alt="Neo Game Cafe Dış Cephe ve Cadde Girişi" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/20 to-transparent opacity-90 group-hover:opacity-80 transition-opacity"></div>
+            
+            <!-- Badges -->
+            <div class="absolute top-4 left-4 flex items-center gap-2">
+              <span class="px-2.5 py-1 bg-blood-red text-pure-white font-label-index text-[11px] uppercase tracking-widest font-bold shadow">
+                [01 // DIŞ CEPHE]
+              </span>
+              <span class="px-2 py-0.5 bg-charcoal-black/80 backdrop-blur-sm text-pure-white/90 font-label-code text-xs uppercase border border-white/15">
+                CADDE GİRİŞİ
+              </span>
+            </div>
+
+            <div class="absolute top-4 right-4 w-9 h-9 bg-charcoal-black/70 hover:bg-blood-red text-pure-white flex items-center justify-center border border-white/20 backdrop-blur-sm transition-colors">
+              <span class="material-symbols-outlined text-[18px]">open_in_full</span>
+            </div>
+
+            <!-- Bottom Content -->
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="font-headline-md text-xl lg:text-2xl uppercase font-bold text-pure-white group-hover:text-blood-red transition-colors">
+                Dış Cephe &amp; Cadde Girişi
+              </h3>
+              <p class="font-body-sm text-soft-grey text-xs sm:text-sm mt-1 line-clamp-2">
+                Konformist Residence önü müstakil girişimiz, dış oturma alanı ve kırmızı LED tabelamız.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: VIP Booths & Golden Logo (5 cols) -->
+          <div class="gallery-item md:col-span-5 relative h-72 sm:h-80 lg:h-96 bg-carbon-surface border border-white/10 hover:border-blood-red/80 transition-all duration-300 overflow-hidden group cursor-pointer shadow-xl spotlight-card"
+               data-gallery-idx="1"
+               data-img="assets/images/venue/venue-3.jpg"
+               data-title="VIP Konsol Locaları &amp; Altın Logo"
+               data-tag="ÖZEL KABİNLER"
+               data-desc="Özel neo CAFE logolu akrilik kabinler ve amber LED aydınlatmalı bağımsız oyun odaları.">
+            <img src="assets/images/venue/venue-3.jpg" 
+                 alt="VIP Konsol Locaları ve neo CAFE Altın Logo" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/20 to-transparent opacity-90 group-hover:opacity-80 transition-opacity"></div>
+            
+            <div class="absolute top-4 left-4 flex items-center gap-2">
+              <span class="px-2.5 py-1 bg-blood-red text-pure-white font-label-index text-[11px] uppercase tracking-widest font-bold shadow">
+                [02 // VIP ALAN]
+              </span>
+              <span class="px-2 py-0.5 bg-charcoal-black/80 backdrop-blur-sm text-pure-white/90 font-label-code text-xs uppercase border border-white/15">
+                ÖZEL KABİNLER
+              </span>
+            </div>
+
+            <div class="absolute top-4 right-4 w-9 h-9 bg-charcoal-black/70 hover:bg-blood-red text-pure-white flex items-center justify-center border border-white/20 backdrop-blur-sm transition-colors">
+              <span class="material-symbols-outlined text-[18px]">open_in_full</span>
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="font-headline-md text-xl lg:text-2xl uppercase font-bold text-pure-white group-hover:text-blood-red transition-colors">
+                VIP Konsol Locaları
+              </h3>
+              <p class="font-body-sm text-soft-grey text-xs sm:text-sm mt-1 line-clamp-2">
+                Özel neo CAFE logolu akrilik kabinler ve amber LED aydınlatmalı bağımsız oyun odaları.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Artisan Cafe Bar & Counter (4 cols) -->
+          <div class="gallery-item md:col-span-4 relative h-64 sm:h-72 bg-carbon-surface border border-white/10 hover:border-blood-red/80 transition-all duration-300 overflow-hidden group cursor-pointer shadow-xl spotlight-card"
+               data-gallery-idx="2"
+               data-img="assets/images/venue/venue-2.jpg"
+               data-title="Artisan Kafe Bar &amp; Banko"
+               data-tag="KAFE BARI"
+               data-desc="Taze espresso çekim makineleri, neon yönlendirme tabelaları ve bar bankosu.">
+            <img src="assets/images/venue/venue-2.jpg" 
+                 alt="Artisan Kafe Bar ve Banko" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/20 to-transparent opacity-90 group-hover:opacity-80 transition-opacity"></div>
+            
+            <div class="absolute top-3 left-3 flex items-center gap-1.5">
+              <span class="px-2 py-0.5 bg-blood-red text-pure-white font-label-index text-[10px] uppercase tracking-widest font-bold">
+                [03 // KAFE]
+              </span>
+            </div>
+
+            <div class="absolute top-3 right-3 w-8 h-8 bg-charcoal-black/70 hover:bg-blood-red text-pure-white flex items-center justify-center border border-white/20 backdrop-blur-sm transition-colors">
+              <span class="material-symbols-outlined text-[16px]">open_in_full</span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3">
+              <h3 class="font-headline-md text-lg uppercase font-bold text-pure-white group-hover:text-blood-red transition-colors">
+                Artisan Kafe Barı
+              </h3>
+              <p class="font-body-sm text-soft-grey text-xs mt-0.5 line-clamp-1">
+                Taze espresso çekimi, neon yönlendirme ve bar bankosu.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: Console Hallway & TV Setups (4 cols) -->
+          <div class="gallery-item md:col-span-4 relative h-64 sm:h-72 bg-carbon-surface border border-white/10 hover:border-blood-red/80 transition-all duration-300 overflow-hidden group cursor-pointer shadow-xl spotlight-card"
+               data-gallery-idx="3"
+               data-img="assets/images/venue/venue-1.jpg"
+               data-title="PlayStation Salonu &amp; TV Locaları"
+               data-tag="OYUN ALANI"
+               data-desc="Büyük ekran TV üniteleri ve rahat koltuk düzeniyle kesintisiz futbol ve aksiyon deneyimi.">
+            <img src="assets/images/venue/venue-1.jpg" 
+                 alt="PlayStation Salonu ve TV Locaları" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/20 to-transparent opacity-90 group-hover:opacity-80 transition-opacity"></div>
+            
+            <div class="absolute top-3 left-3 flex items-center gap-1.5">
+              <span class="px-2 py-0.5 bg-blood-red text-pure-white font-label-index text-[10px] uppercase tracking-widest font-bold">
+                [04 // SALON]
+              </span>
+            </div>
+
+            <div class="absolute top-3 right-3 w-8 h-8 bg-charcoal-black/70 hover:bg-blood-red text-pure-white flex items-center justify-center border border-white/20 backdrop-blur-sm transition-colors">
+              <span class="material-symbols-outlined text-[16px]">open_in_full</span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3">
+              <h3 class="font-headline-md text-lg uppercase font-bold text-pure-white group-hover:text-blood-red transition-colors">
+                Konsol Locaları &amp; TV
+              </h3>
+              <p class="font-body-sm text-soft-grey text-xs mt-0.5 line-clamp-1">
+                Geniş ekran TV üniteleri ve rahat koltuk düzeni.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5: In-Store LED Menu Sign (4 cols) -->
+          <div class="gallery-item md:col-span-4 relative h-64 sm:h-72 bg-carbon-surface border border-white/10 hover:border-blood-red/80 transition-all duration-300 overflow-hidden group cursor-pointer shadow-xl spotlight-card"
+               data-gallery-idx="4"
+               data-img="assets/images/venue/venue-5.jpg"
+               data-title="Orijinal Işıklı Menü Panosu"
+               data-tag="IŞIKLI MENÜ"
+               data-desc="Dükkandaki tescilli LED içecek menüsü tabelası ve @neogamecafe topluluğu.">
+            <img src="assets/images/venue/venue-5.jpg" 
+                 alt="Neo Game Cafe Orijinal Işıklı Menü Panosu" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-black via-charcoal-black/20 to-transparent opacity-90 group-hover:opacity-80 transition-opacity"></div>
+            
+            <div class="absolute top-3 left-3 flex items-center gap-1.5">
+              <span class="px-2 py-0.5 bg-blood-red text-pure-white font-label-index text-[10px] uppercase tracking-widest font-bold">
+                [05 // MENÜ PANOSU]
+              </span>
+            </div>
+
+            <div class="absolute top-3 right-3 w-8 h-8 bg-charcoal-black/70 hover:bg-blood-red text-pure-white flex items-center justify-center border border-white/20 backdrop-blur-sm transition-colors">
+              <span class="material-symbols-outlined text-[16px]">open_in_full</span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3">
+              <h3 class="font-headline-md text-lg uppercase font-bold text-pure-white group-hover:text-blood-red transition-colors">
+                Işıklı Menü Panosu
+              </h3>
+              <p class="font-body-sm text-soft-grey text-xs mt-0.5 line-clamp-1">
+                Dükkandaki orijinal LED tabelamız ve @neogamecafe.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- MEKAN GALERİSİ LIGHTBOX MODALI                                            -->
+    <!-- ========================================================================= -->
+    <div id="gallery-lightbox-modal" class="fixed inset-0 z-50 bg-black/95 hidden items-center justify-center p-3 sm:p-6 backdrop-blur-md select-none" role="dialog" aria-modal="true" aria-label="Fotoğraf İnceleme">
+      <div class="relative max-w-5xl w-full flex flex-col items-center">
+        
+        <!-- Top Toolbar -->
+        <div class="w-full flex items-center justify-between pb-3 text-pure-white border-b border-white/10 mb-3">
+          <div class="flex items-center gap-3">
+            <span class="px-2 py-0.5 bg-blood-red text-pure-white font-label-index text-xs font-bold" id="gallery-lightbox-counter">[ 1 / 5 ]</span>
+            <span class="font-headline-md text-base sm:text-lg uppercase font-bold tracking-tight" id="gallery-lightbox-title">Dış Cephe &amp; Cadde Girişi</span>
+          </div>
+          <button type="button" id="gallery-close-btn" class="w-10 h-10 flex items-center justify-center bg-carbon-surface hover:bg-blood-red text-pure-white transition-colors cursor-pointer" aria-label="Kapat">
+            <span class="material-symbols-outlined text-2xl">close</span>
+          </button>
+        </div>
+
+        <!-- Lightbox Image Viewport & Navigation Controls -->
+        <div class="relative w-full max-h-[75vh] flex items-center justify-center overflow-hidden bg-charcoal-black border border-white/10">
+          <img id="gallery-lightbox-img" 
+               src="assets/images/venue/venue-4.jpg" 
+               alt="Mekan Fotoğrafı Büyütülmüş Görünüm" 
+               class="max-h-[72vh] max-w-full object-contain transition-opacity duration-200">
+
+          <!-- Prev Button -->
+          <button type="button" id="gallery-prev-btn" class="absolute left-2 top-1/2 -translate-y-1/2 w-12 h-12 bg-charcoal-black/80 hover:bg-blood-red text-pure-white flex items-center justify-center border border-white/20 backdrop-blur-sm transition-colors cursor-pointer z-30" aria-label="Önceki Fotoğraf">
+            <span class="material-symbols-outlined text-3xl">chevron_left</span>
+          </button>
+
+          <!-- Next Button -->
+          <button type="button" id="gallery-next-btn" class="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 bg-charcoal-black/80 hover:bg-blood-red text-pure-white flex items-center justify-center border border-white/20 backdrop-blur-sm transition-colors cursor-pointer z-30" aria-label="Sonraki Fotoğraf">
+            <span class="material-symbols-outlined text-3xl">chevron_right</span>
+          </button>
+        </div>
+
+        <!-- Bottom Description Bar -->
+        <div class="w-full pt-3 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p class="font-body-sm text-soft-grey text-xs sm:text-sm" id="gallery-lightbox-desc">
+            Konformist Residence önü müstakil girişimiz, dış oturma alanı ve kırmızı LED tabelamız.
+          </p>
+          <div class="font-label-code text-[11px] text-pure-white/60 uppercase tracking-widest shrink-0">
+            [KAPATMAK İÇİN ESC VEYA BOŞLUĞA TIKLAYIN]
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ========================================================================= -->
+    <!-- 4. ALAN: VISIT NEO & LOCATION (CARTO DARK MATTER MAPLIBRE GL EMBED)       -->
+    <!-- ========================================================================= -->
+    <section class="w-full bg-charcoal-black text-pure-white py-space-2xl px-margin-mobile lg:px-margin select-none border-b border-white/10" id="visit-venue">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+        
+        <!-- Left Column: Business Credentials & Verified Contact -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-space-md h-full">
+          <div>
+            <span class="font-label-index text-label-index uppercase tracking-widest text-blood-red font-bold block mb-space-xs">
+              [008 // KONUM &amp; İLETİŞİM]
+            </span>
+            <h2 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl uppercase font-bold tracking-tighter text-pure-white leading-none">
+              BEYLİKDÜZÜ’NDE BİZE KATILIN.
+            </h2>
+            <p class="font-body-lg text-body-lg text-soft-grey mt-space-sm leading-relaxed">
+              Makyol Starbucks karşısında, Mikel Cafe’nin hemen yanındaki müstakil girişimizle hizmetinizdeyiz. Toplu taşıma ve metrobüs durağına kısa yürüme mesafesinde.
+            </p>
+          </div>
+
+          <!-- Exact Address Card -->
+          <div class="p-space-md bg-carbon-surface border border-white/10 flex flex-col gap-1 shadow-sm">
+            <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">
+              [TAM AÇIK ADRES]
+            </span>
+            <p class="font-body-md text-pure-white font-medium leading-relaxed">
+              Barış Mahallesi, Akdeniz Caddesi, Kır Çiçeği Sokak, Konformist Residence, 34520 Beylikdüzü / İstanbul
+            </p>
+          </div>
+
+          <!-- Operational Schedule & Direct Phone -->
+          <div class="space-y-space-sm">
+            
+            <!-- Hours Card -->
+            <div class="p-space-md bg-carbon-surface border border-white/10 flex flex-col gap-space-xs shadow-sm">
+              <span class="font-label-index text-label-index text-soft-grey uppercase tracking-widest font-bold">
+                [ÇALIŞMA SAATLERİ]
+              </span>
+              <div class="flex justify-between items-baseline">
+                <span class="font-body-md text-pure-white">Pazartesi – Perşembe</span>
+                <span class="font-label-code text-label-code text-blood-red font-bold">10:00 – 02:00</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="font-body-md text-pure-white">Cuma – Pazar</span>
+                <span class="font-label-code text-label-code text-blood-red font-bold">10:00 – 03:00</span>
+              </div>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="p-space-md bg-carbon-surface border border-white/10 flex flex-col gap-space-xs shadow-sm">
+              <span class="font-label-index text-label-index text-soft-grey uppercase tracking-widest font-bold">
+                [DOĞRUDAN İLETİŞİM HATTI]
+              </span>
+              <a class="font-headline-md text-2xl lg:text-3xl font-bold text-blood-red hover:text-pure-white transition-colors tracking-tight block" href="tel:+905315869966">
+                +90 531 586 99 66
+              </a>
+              <span class="font-label-index text-label-index text-soft-grey uppercase">
+                [WHATSAPP &amp; TELEFON İLE ULAŞIN]
+              </span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+              <a class="flex-1 text-center py-space-sm px-space-md bg-blood-red hover:bg-pure-white hover:text-charcoal-black text-pure-white font-label-code text-label-code uppercase tracking-widest font-bold transition-all shadow-md" href="tel:+905315869966">
+                HEMEN ARA
+              </a>
+              <a class="flex-1 text-center py-space-sm px-space-md bg-pure-white hover:bg-blood-red hover:text-pure-white text-charcoal-black font-label-code text-label-code uppercase tracking-widest font-bold transition-all shadow-md" 
+                 href="https://www.google.com/maps/place/NEO+GAME+CAFE/@41.0053611,28.6536855,17z/data=!3m1!4b1!4m6!3m5!1s0x14b55f93ffd352d3:0x1487a52ebf283f69!8m2!3d41.0053611!4d28.6536855!16s%2Fg%2F11fzf3s7sc" 
+                 rel="noopener noreferrer" 
+                 target="_blank">
+                HARİTALAR'DA AÇ
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Landmarks Grid (Without Fabricated Meters/Minutes) -->
+          <div class="grid grid-cols-3 gap-space-xs pt-space-xs">
+            <div class="p-space-xs bg-carbon-surface border border-white/5 text-center">
+              <span class="font-label-index text-label-index text-blood-red uppercase block font-bold">[REFERANS 01]</span>
+              <span class="font-body-sm font-bold text-pure-white block">Starbucks</span>
+              <span class="font-label-index text-label-index text-soft-grey block">Tam Karşısı</span>
+            </div>
+            <div class="p-space-xs bg-carbon-surface border border-white/5 text-center">
+              <span class="font-label-index text-label-index text-blood-red uppercase block font-bold">[REFERANS 02]</span>
+              <span class="font-body-sm font-bold text-pure-white block">Mikel Cafe</span>
+              <span class="font-label-index text-label-index text-soft-grey block">Bitişik Komşusu</span>
+            </div>
+            <div class="p-space-xs bg-carbon-surface border border-white/5 text-center">
+              <span class="font-label-index text-label-index text-blood-red uppercase block font-bold">[ULAŞIM]</span>
+              <span class="font-body-sm font-bold text-pure-white block">Metrobüs</span>
+              <span class="font-label-index text-label-index text-soft-grey block">Yürüme Mesafesi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive MapLibre GL Dark Matter Map (like kuzeyeskiar.com.tr) -->
+        <div class="lg:col-span-7 flex flex-col justify-between h-full">
+          <div class="w-full relative h-[480px] lg:h-full min-h-[540px] rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl z-20 bg-charcoal-black" id="venue-map">
+            <!-- Graceful Fallback if WebGL/MapLibre unavailable -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-charcoal-black" id="map-fallback">
+              <img src="assets/images/map-location.jpg" alt="Harita Konumu" class="absolute inset-0 w-full h-full object-cover opacity-40">
+              <div class="relative z-10 p-6 bg-charcoal-black/90 border border-white/20 max-w-sm rounded-lg backdrop-blur-sm">
+                <span class="material-symbols-outlined text-blood-red text-4xl mb-2">location_on</span>
+                <div class="font-headline-md font-bold text-pure-white text-base uppercase">NEO GAME CAFE &amp; LOUNGE</div>
+                <div class="font-body-sm text-soft-grey text-xs mt-1">Konformist Residence, Barış Mah., Beylikdüzü</div>
+                <a href="https://www.google.com/maps/place/NEO+GAME+CAFE/@41.0053611,28.6536855,17z/data=!3m1!4b1!4m6!3m5!1s0x14b55f93ffd352d3:0x1487a52ebf283f69!8m2!3d41.0053611!4d28.6536855!16s%2Fg%2F11fzf3s7sc" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block px-4 py-2 bg-blood-red text-pure-white font-label-code text-xs uppercase font-bold tracking-wider hover:bg-pure-white hover:text-charcoal-black transition-colors">
+                  Google Haritalar'da Aç ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- BRAND SIGNATURE FOOTER                                                    -->
+  <!-- ========================================================================= -->
+  <footer class="w-full bg-surface-container-lowest text-pure-white pt-space-2xl pb-space-xl border-t border-white/10">
+    <div class="w-full px-margin-mobile lg:px-margin">
+      
+      <!-- Oversized Brand Header -->
+      <div class="pb-space-xl">
+        <div class="font-display-hero text-4xl sm:text-6xl lg:text-8xl uppercase tracking-tighter text-pure-white select-none leading-none">
+          NEO GAME CAFE &amp; LOUNGE
+        </div>
+        <div class="font-label-index text-label-index text-soft-grey uppercase tracking-widest mt-space-xs">
+          [000 SOCIAL LOUNGE &amp; ESPORTS ARENA — BEYLİKDÜZÜ / İSTANBUL]
+        </div>
+      </div>
+
+      <!-- 4-Column Directory -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg py-space-xl border-t border-b border-white/10">
+        
+        <!-- Column 1: Location -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">
+            [001 KONUM &amp; ADRES]
+          </span>
+          <p class="font-body-md text-body-md text-soft-grey">
+            Makyol Starbucks karşısı, Mikel Cafe yanı
+          </p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Barış Mah. Mehmetçik Cad. No: 12/A, Beylikdüzü / İstanbul
+          </p>
+          <div class="pt-space-xs">
+            <a class="font-label-code text-label-code text-pure-white hover:text-blood-red block font-bold transition-colors" href="tel:+905315869966">
+              TEL: +90 531 586 99 66
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Hours -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">
+            [002 ÇALIŞMA SAATLERİ]
+          </span>
+          <div class="flex flex-col gap-space-xs">
+            <div class="flex justify-between items-baseline">
+              <span class="font-body-sm text-body-sm text-soft-grey">Pzt – Perşembe</span>
+              <span class="font-label-code text-label-code text-pure-white font-bold">10:00 – 02:00</span>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <span class="font-body-sm text-body-sm text-soft-grey">Cuma – Pazar</span>
+              <span class="font-label-code text-label-code text-pure-white font-bold">10:00 – 03:00</span>
+            </div>
+            <div class="mt-space-xs">
+              <span class="font-label-index text-label-index text-soft-grey uppercase">
+                [HAFTALIK DÜZENLİ FAALİYET]
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Experiences -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">
+            [003 ALANLAR &amp; DENEYİM]
+          </span>
+          <nav class="flex flex-col gap-space-xs" aria-label="Alt Menü Alanlar">
+            <a class="font-body-sm text-body-sm text-soft-grey hover:text-pure-white transition-colors" href="#deneyimler">
+              PlayStation Konsol Odaları
+            </a>
+            <a class="font-body-sm text-body-sm text-soft-grey hover:text-pure-white transition-colors" href="#deneyimler">
+              Alt Kat Turnuva Bilardo Salonu
+            </a>
+            <a class="font-body-sm text-body-sm text-soft-grey hover:text-pure-white transition-colors" href="#masa-oyunlari">
+              Kutu Oyunları &amp; Masaüstü RPG
+            </a>
+            <a class="font-body-sm text-body-sm text-soft-grey hover:text-pure-white transition-colors" href="#menu">
+              Dijital Menü &amp; Kafe Bar
+            </a>
+            <a class="font-body-sm text-body-sm text-soft-grey hover:text-pure-white transition-colors" href="#mekan-galeri">
+              Mekan &amp; Atmosfer Galerisi
+            </a>
+          </nav>
+        </div>
+
+        <!-- Column 4: Contact & Inquiries -->
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-label-index text-label-index text-blood-red uppercase tracking-widest font-bold">
+            [004 KURUMSAL &amp; İLETİŞİM]
+          </span>
+          <p class="font-body-sm text-body-sm text-soft-grey">
+            Turnuva katılımı, grup etkinlikleri ve mekan danışması için direkt temas kurun.
+          </p>
+          <a class="inline-block px-space-md py-space-xs bg-carbon-surface hover:bg-blood-red text-pure-white font-label-code text-label-code uppercase tracking-wider text-center font-bold transition-colors border border-white/10" href="tel:+905315869966">
+            ARA: +90 531 586 99 66
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Legal & Location -->
+      <div class="pt-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+        <span class="font-label-index text-label-index text-soft-grey uppercase tracking-widest">
+          © 2026 NEO GAME CAFE &amp; LOUNGE. BEYLİKDÜZÜ / TÜM HAKLARI SAKLIDIR.
+        </span>
+        <div class="flex items-center gap-space-md">
+          <span class="font-label-index text-label-index text-pure-white uppercase font-bold">
+            BEYLİKDÜZÜ, İSTANBUL, TR
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MapLibre GL JS (for Carto Dark Matter Map like kuzeyeskiar.com.tr) -->
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+
+  <!-- QR Code Generator JS (Local Bundle) -->
+  <script src="assets/js/qrcode.min.js"></script>
+
+  <!-- Central Config & Application Scripts -->
+  <script src="assets/js/venue-config.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
