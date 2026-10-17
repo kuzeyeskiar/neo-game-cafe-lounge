@@ -87,7 +87,9 @@ const forbiddenStrings = [
   'poster="assets/images/hero-player.jpg"',
   'QR KODU İNDİR (PNG)',
   'MASA KARTI BASKISI (ÖNİZLE)',
-  'table-stand-modal'
+  'table-stand-modal',
+  'Konformist',
+  'Mehmetçik'
 ];
 
 forbiddenStrings.forEach(str => {
@@ -131,7 +133,10 @@ const requiredVerifiedStrings = [
   'property="og:title"',
   'name="twitter:card"',
   'overflow-x-hidden',
-  'id="map-fallback"'
+  'id="map-fallback"',
+  'Prestij Konak',
+  'Samsun Cad.',
+  'Dükkan: 8'
 ];
 
 requiredVerifiedStrings.forEach(str => {

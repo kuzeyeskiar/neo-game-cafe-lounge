@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!mapContainer || typeof maplibregl === 'undefined') return;
 
     try {
-      // Exact Coordinates for Konformist Residence, Barış Mah., Akdeniz Cad., Beylikdüzü
+      // Exact Coordinates for Prestij Konak Apt, Barış Mah., Samsun Cad., Beylikdüzü
       const coords = [28.6536855, 41.0053611]; // [Lng, Lat]
 
       const map = new maplibregl.Map({
@@ -330,8 +330,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .setHTML(`
           <div class="p-3 bg-charcoal-black text-pure-white border border-white/20 shadow-2xl rounded-lg font-sans">
             <div class="font-headline-md font-bold text-blood-red uppercase tracking-wider text-xs">NEO GAME CAFE &amp; LOUNGE</div>
-            <div class="text-[11px] text-pure-white font-medium mt-1">Konformist Residence</div>
-            <div class="text-[10px] text-soft-grey leading-tight">Barış Mah. Akdeniz Cad. Kır Çiçeği Sk.</div>
+            <div class="text-[11px] text-pure-white font-medium mt-1">Prestij Konak Apt. No: 21 Dükkan: 8</div>
+            <div class="text-[10px] text-soft-grey leading-tight">Barış Mah. Samsun Cad. Kır Sk. Beylikdüzü</div>
             <a href="https://www.google.com/maps/place/NEO+GAME+CAFE/@41.0053611,28.6536855,17z/data=!3m1!4b1!4m6!3m5!1s0x14b55f93ffd352d3:0x1487a52ebf283f69!8m2!3d41.0053611!4d28.6536855!16s%2Fg%2F11fzf3s7sc" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-[10px] text-blood-red font-bold hover:underline uppercase tracking-wider">
               Yol Tarifi Al ↗
             </a>

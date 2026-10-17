@@ -12,13 +12,13 @@ window.NEO_CONFIG = {
     tagline: "OYUNUN MERKEZİ.",
     subTitle: "PlayStation 5 VIP odaları, alt kat turnuva bilardo salonu, masaüstü strateji oyunları ve artisan espresso barı. Beylikdüzü’nde yeni nesil buluşma platformu.",
     locationBadge: "BEYLİKDÜZÜ // İSTANBUL",
-    subDistrict: "Barış Mahallesi, Akdeniz Caddesi, Kır Çiçeği Sokak",
-    fullAddress: "Barış Mahallesi, Akdeniz Caddesi, Kır Çiçeği Sokak, Konformist Residence, 34520 Beylikdüzü / İstanbul",
+    subDistrict: "Barış Mahallesi, Samsun Caddesi, Kır Sokak",
+    fullAddress: "Barış Mahallesi, Samsun Caddesi, Kır Sokak, Prestij Konak Apt. No: 21 Dükkan: 8, 34520 Beylikdüzü / İstanbul",
     coordinates: {
       lat: 41.0053611,
       lng: 28.6536855
     },
-    locationDescription: "Barış Mahallesi Akdeniz Caddesi Kır Çiçeği Sokak Konformist Residence, Makyol Starbucks karşısı, Mikel Cafe yanı, Beylikdüzü, İstanbul.",
+    locationDescription: "Barış Mahallesi Samsun Caddesi Kır Sokak Prestij Konak Apt. No: 21 Dükkan: 8, Makyol Starbucks karşısı, Mikel Cafe yanı, Beylikdüzü, İstanbul.",
     phone: "+90 531 586 99 66",
     phoneTel: "tel:+905315869966",
     mapsUrl: "https://www.google.com/maps/place/NEO+GAME+CAFE/@41.0053611,28.6536855,17z/data=!3m1!4b1!4m6!3m5!1s0x14b55f93ffd352d3:0x1487a52ebf283f69!8m2!3d41.0053611!4d28.6536855!16s%2Fg%2F11fzf3s7sc",
@@ -385,7 +385,7 @@ window.NEO_CONFIG = {
       image: "assets/images/venue/venue-4.jpg",
       title: "Dış Cephe & Cadde Girişi",
       tag: "CADDE GİRİŞİ",
-      description: "Konformist Residence önü müstakil girişimiz, dış oturma alanı ve kırmızı LED tabelamız."
+      description: "Prestij Konak Apt. önü müstakil girişimiz, dış oturma alanı ve kırmızı LED tabelamız."
     },
     {
       id: "venue-3",
