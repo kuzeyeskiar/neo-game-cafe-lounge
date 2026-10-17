@@ -44,6 +44,8 @@ const requiredImages = [
   'venue/venue-3.jpg',
   'venue/venue-4.jpg',
   'venue/venue-5.jpg',
+  'venue/venue-6.jpg',
+  'venue/venue-7.jpg',
   'triptych-snacks.jpg',
   'triptych-lounge.png',
   'menu/popcorn.png'
